@@ -11,16 +11,19 @@ function computerPlay () {
     return result;
 }
 
-/*function capitalize (str) {
+// let playerSelection = prompt("Rock, Paper, or Scissors?");
+
+function capitalize (str) {
     let start = str.substring(0, 1);
     start = start.toUpperCase();
     str = str.toLowerCase();
     str = start + str.slice(1);
     return str;
-}*/
+}
 
-function round (playerSelection) {
-    let computerSelection = computerPlay();
+// playerSelection = capitalize(playerSelection);
+
+function round (playerSelection, computerSelection) {
     let result;
     if (playerSelection == computerSelection) {
         result = "This round is a draw, " + playerSelection + " and " + computerSelection + " are the same!";
@@ -30,37 +33,16 @@ function round (playerSelection) {
         ((playerSelection == "Scissors" && computerSelection == ("Paper")))) {
             result = "You win this round, " + playerSelection + " beats " + computerSelection + "!";
             plyr = plyr + 1;
-            score[0].children[0].innerHTML = plyr;
         } else {
             result = "You lose this round, " + computerSelection + " beats " + playerSelection + "!";
             comp = comp + 1;
-            score[0].children[2].innerHTML = comp;
         }
     }
     return result;
 }
-
-let plyr = 0;
-let comp = 0;
-let score = document.getElementsByClassName('score');
-//console.log(score[0].children[2]);
-let choices = document.getElementsByClassName('play');
-console.log(choices);
-
-
-for (const [key, value] of Object.entries(choices)) {
-    value.addEventListener("click", function () {
-        let choice = value.getAttribute('data-play');
-        //console.log(choice);
-        round(choice);
-    });
-}
-
-
-
-  
-  
-/*   
+    let plyr = 0;
+    let comp = 0;
+   
 function game () {
     let playerSelection, computerSelection;
      for (let i = 1; i < 6; i++) {
@@ -79,4 +61,3 @@ function game () {
         console.log("It's a draw! Final score: You - " + plyr + ", Computer - " + comp);
     }
 }
-*/
