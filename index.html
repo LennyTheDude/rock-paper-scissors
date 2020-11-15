@@ -5,11 +5,16 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <button class="play" data-play="Rock">Rock</button>
-    <button class="play" data-play="Paper">Paper</button>
-    <button class="play" data-play="Scissors">Scissors</button>
-    <div class="score">You: <span id="plyr"></span> 
-        <br />Computer: <span id="comp"></span></div>
+    <button class="selection" data-play="Rock">Rock</button>
+    <button class="selection" data-play="Paper">Paper</button>
+    <button class="selection" data-play="Scissors">Scissors</button>
+    <div class="choices">You chose <span id="plyr-sel"></span>
+        <br />Computer chose <span id="comp-sel"></span>
+        <br /><span id="result">Who will win?</span>
+    </div>
+    <br />
+    <div class="score">Score<br />You: <span id="plyr">0</span>
+        <br />Computer: <span id="comp">0</span></div>
     <script src="script.js"></script>
 </body>
 </html>
